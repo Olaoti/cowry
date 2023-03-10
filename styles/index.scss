@@ -1,0 +1,84 @@
+@font-face {
+    font-family:"Light" ;
+    src: url("../fonts/BR\ Firma\ Light.otf");
+  }
+  @font-face {
+    font-family:"Bold" ;
+    src: url("../fonts/BR\ Firma\ Bold.otf");
+  }
+  @font-face {
+    font-family:"Medium" ;
+    src: url("../fonts/BR\ Firma\ Medium.otf");
+  }
+  
+  @import "./styles/variables.scss";
+  
+  *{margin: 0; padding: 0; box-sizing: border-box;}
+  html{
+    font-size: 62.5%;
+  }
+  body{
+    font-family: Medium;
+  
+  }
+  input{
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    &::placeholder{
+      font-size: inherit;
+    }
+  }
+  .btn{
+    font-size: 1.44rem;
+    background-color: $color-primary-blue;
+    padding: .3rem 2.2rem;
+    letter-spacing: .6px;
+    line-height: 4rem;
+    color: #fff;
+    width: fit-content;
+    height: min-content;
+    max-height: min-content;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: .5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 0 4px 6px 1px #0066f52e;
+    border: none;
+    transition: all 400ms ease-in-out;
+    font-family: Light;
+  }
+  .btn:hover{
+    box-shadow: 4px 8px 8px 2px #0066f52e;
+  
+  }
+  .bighead{
+    font-size: 9.6rem;
+    line-height: 11rem;
+    color: $color-deep-blue;
+    font-weight: 700;
+    letter-spacing: -5.4px;
+    margin-top: -10rem;
+  }
+  @media screen and (max-width: 940px){
+    .bighead{
+      margin-top: 0;
+    }
+  }
+  
+  /*Components styles*/
+  @import "./styles/components/navbar.scss";
+  @import "./styles/components/header.scss";
+  @import "./styles/components/richstep.scss";
+  @import "./styles/components/invest.scss";
+  @import "./styles/components/appinfo.scss";
+  @import "./styles/components/security.scss";
+  @import "./styles/components/reviews.scss";
+  @import "./styles/components/signup.scss";
+  @import "./styles/components/footer.scss";
+  
+  /*Pages styles*/
+  

@@ -1,6 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const withReactSvg = require("next-react-svg");
+const path = require("path");
 
-module.exports = nextConfig
+module.exports = withReactSvg({
+  include: path.resolve(__dirname, "public/assets"),
+  webpack(config) {
+    return config;
+  },
+  ReactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+});
