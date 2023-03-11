@@ -48,6 +48,13 @@ const Header = () => {
   ];
   const [HeaderInfo, setHeaderinfo] = useState(headerInfo);
 
+  const videoRef = useRef(null);
+  useEffect(() => {
+    if (HeaderInfo[number]?.playing && HeaderInfo[number]?.nowplaying) {
+      videoRef.current.load();
+      videoRef.current.play();
+    }
+  }, [HeaderInfo, number]);
   const playClicked = () => {
     if (!HeaderInfo[number]?.playing) {
       const newheader = { ...HeaderInfo };
@@ -67,12 +74,6 @@ const Header = () => {
     setHeaderinfo(newheader);
     videoRef.current.pause();
   };
-  const videoRef = useRef(null);
-  useEffect(() => {
-    if (HeaderInfo[number]?.playing && HeaderInfo[number]?.nowplaying) {
-      videoRef.current.play();
-    }
-  }, [HeaderInfo, number]);
 
   const imageRef = useRef();
   const overlayRef = useRef();

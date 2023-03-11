@@ -1,6 +1,5 @@
-import { useState } from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import Link from "next/link";
 import Plan from "../public/assets/navbar/plan.svg";
 import Save from "../public/assets/navbar/save.svg";
 import Invest from "../public/assets/navbar/invest.svg";
@@ -16,7 +15,7 @@ import gsap from "gsap";
 function Navbar() {
   const [show, handleShow] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 140) {
       handleShow(true);
     } else {
       handleShow(false);
@@ -28,18 +27,21 @@ function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const links = [
     {
       id: 0,
       img: Plan,
       head: "Plan",
       text: "Access financial tools and guides",
+      link: "plan",
     },
     {
       id: 1,
       img: Save,
       head: "Save",
       text: "Earn better interests than your bank",
+      link: "save",
     },
     {
       id: 2,
@@ -376,18 +378,26 @@ function Navbar() {
                   ?.filter((list) => list.id <= 3)
                   .map((link) => {
                     return (
-                      <div
-                        className={`link-to-page animated${link?.id}`}
-                        key={link.id}
-                      >
-                        <div className="image">
-                          <link.img />
-                        </div>
-                        <div className="link__texts">
-                          <div className="link__texts__head">{link.head}</div>
-                          <div className="link__texts__body">{link.text}</div>
-                        </div>
-                      </div>
+                      <Link href={`${link.link}`} className="link">
+                        <a>
+                          <div
+                            className={`link-to-page animated${link?.id}`}
+                            key={link.id}
+                          >
+                            <div className="image">
+                              <link.img />
+                            </div>
+                            <div className="link__texts">
+                              <div className="link__texts__head">
+                                {link.head}
+                              </div>
+                              <div className="link__texts__body">
+                                {link.text}
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
                     );
                   })}
               </div>

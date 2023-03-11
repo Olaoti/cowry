@@ -1,0 +1,99 @@
+.mini-header{
+    min-height: 100vh;
+    height: auto;
+    z-index: 0;
+    position: relative;
+    padding: 3rem 0 0;
+    width: 100%;
+    overflow-x: hidden;
+    &__texts{
+        width: 100%;
+        padding:0 9rem;
+        color: $color-deep-blue;
+        position: relative;
+        z-index: 2;
+        h1{
+            font-size: 5.44rem;
+            letter-spacing: -1.8px;
+            line-height: 1.25;
+            margin-bottom: 0.7em;
+            font-weight: 900;
+            font-family: Bold;
+        }   
+        p{
+            max-width: 80%;
+        }
+        .btn{
+            margin-top: 2.4rem;
+        }
+    }
+  &__image{
+    overflow: hidden;
+    width: 100%;
+     svg{
+        overflow: hidden;
+        width: 80%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 100%;
+        margin-right: -29%;
+     }
+  }
+}
+@media screen and (max-width:1300px) {
+    .mini-header{
+        &__texts{
+            padding: 0 2.4rem;
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    .mini-header{
+        &.grid-two{
+            grid-template-columns: 2fr 1fr;
+            width:100%;
+        }
+        &__image{
+             svg{
+                width: 100%;
+                top: 8rem;
+             }
+          }
+    }
+}
+@media screen and (max-width:750px) {
+    .mini-header{
+        &.grid-two{
+            grid-template-columns: 1fr;
+        }
+        &__texts{
+            h1{
+                font-size: 3.85rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:600px) {
+    .mini-header{
+        min-height: 100%;
+        &__texts{
+            p{
+                max-width: 100%;
+            }
+        }
+        &__image{
+            overflow: hidden;
+            svg{
+                position: static;
+                margin-top: 8rem;
+                margin-right: 0;
+                margin-left: -25vw;
+                margin-bottom: -15rem;
+                overflow: hidden;
+                width:78rem;
+                object-fit: cover;
+            }
+        }
+    }
+}

@@ -21,6 +21,23 @@
     font-family: Medium;
   
   }
+  h2{
+    font-size: 4.86rem;
+    letter-spacing: -1px;
+    line-height: 1.25;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+    color: $color-deep-blue;
+  }
+  p{
+    line-height: 1.7;
+    margin: 1.5rem 0;
+    font-family: Light;
+    font-weight: 600;
+    font-size: 1.8rem;
+    letter-spacing: -.2px;
+    color: $color-deep-blue;
+}
   input{
     outline: none;
     border: 0;
@@ -63,11 +80,39 @@
     letter-spacing: -5.4px;
     margin-top: -10rem;
   }
+  .grid-two{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    align-items: center;
+  }
+  .center{
+    text-align: center;
+  }
+  .link, a{
+    text-decoration: none;
+    font-size: inherit;
+    color: inherit;
+  }
+
   @media screen and (max-width: 940px){
     .bighead{
       margin-top: 0;
     }
   }
+  @media screen and (max-width:750px) {
+    h2 {
+      font-size: 3.3rem;
+  }
+    p{
+        font-size: 1.5rem;
+    }
+  }
+  @media screen and (max-width:600px) {
+
+    }
+  /*props styles*/
+  @import "./props/mini-header.scss";
   
   /*Components styles*/
   @import "./styles/components/navbar.scss";
@@ -79,6 +124,7 @@
   @import "./styles/components/reviews.scss";
   @import "./styles/components/signup.scss";
   @import "./styles/components/footer.scss";
+  @import "./styles/components/toolkit.scss"
   
   /*Pages styles*/
   
