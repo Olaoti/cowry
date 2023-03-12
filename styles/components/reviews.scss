@@ -1,22 +1,6 @@
 .reviews{
-    padding:8rem 0 2rem;
-    &__reason{
-        letter-spacing: 1px;
-        font-size: 1.6rem;
-        margin-bottom: 3rem;
-        color: $color-deep-blue;
-        font-weight: 900;
-    }
-    .questions-section{
-        font-size: 6rem;
-        font-weight: 900;
-        color: $color-deep-blue;
-        display: flex;
-        align-items: center;        
-        &__answer{
-            margin-left: 2rem;
-        }
-    }
+    padding:2rem 0 2rem;
+    height:100%;
     &__section{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -103,14 +87,11 @@
 }
 @media screen and (max-width:1250px) {
     .reviews{
-        padding: 7rem 0 1rem;
+        padding: 1rem 0 1rem;
     }
 }
 @media screen and (max-width: 900px) {
     .reviews{
-        .questions-section{
-            font-size: 4rem;
-        }
         &__section{
             .review-card{
                 padding: 2rem 1rem;
@@ -125,17 +106,7 @@
 }
 @media screen and (max-width:650px) {
     .reviews{
-        padding: 6rem 0 0;
-        .questions-section{
-            font-size: 3.8rem;
-            font-weight: 900;
-            letter-spacing: -1px;
-            display: block;
-            min-height: 18rem;
-            &__answer{
-                margin-left: 0;
-            }
-        }
+        padding: 1rem 0 0;
         &__section{
             margin: 0 0 8rem;
             display: block;

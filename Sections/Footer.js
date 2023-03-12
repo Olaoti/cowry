@@ -7,7 +7,7 @@ import Footerterms from "../Components/Footerterms.js";
 
 const Footer = () => {
   return (
-    <div className="footer-section">
+    <div className="footer-section" style={{ backgroundColor: "white" }}>
       <Reviews />
       <Signup />
       <Footergrid />

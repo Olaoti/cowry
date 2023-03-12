@@ -342,9 +342,13 @@ function Navbar() {
     <div className={`navbar ${show && "showing"}`}>
       <div className="navbar__section">
         <div className="mobile-nav">
-          <div className="logo">
-            <Logo fill="#0067F5" />
-          </div>
+          <Link href="/" legacyBehavior className="link">
+            <a>
+              <div className="logo">
+                <Logo fill="#0067F5" />
+              </div>
+            </a>
+          </Link>
           <div
             onClick={menubarClicked}
             className={`menu ${showMenu ? "cancelicon" : "showicon"}`}
@@ -378,12 +382,14 @@ function Navbar() {
                   ?.filter((list) => list.id <= 3)
                   .map((link) => {
                     return (
-                      <Link href={`${link.link}`} className="link">
+                      <Link
+                        href={`${link?.link}`}
+                        legacyBehavior
+                        className="link"
+                        key={link.id}
+                      >
                         <a>
-                          <div
-                            className={`link-to-page animated${link?.id}`}
-                            key={link.id}
-                          >
+                          <div className={`link-to-page animated${link?.id}`}>
                             <div className="image">
                               <link.img />
                             </div>

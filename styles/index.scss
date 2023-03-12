@@ -10,6 +10,10 @@
     font-family:"Medium" ;
     src: url("../fonts/BR\ Firma\ Medium.otf");
   }
+  @font-face {
+    font-family:"Regular" ;
+    src: url("../fonts/BR\ Firma\ Regular.otf");
+  }
   
   @import "./styles/variables.scss";
   
@@ -21,19 +25,29 @@
     font-family: Medium;
   
   }
+  h2, h4, h5{
+    line-height: 1.25;
+    margin-bottom: 0.7em;
+    font-weight: 900;
+    color: $color-deep-blue;
+  }
   h2{
     font-size: 4.86rem;
     letter-spacing: -1px;
-    line-height: 1.25;
-    margin-bottom: 0.7em;
-    font-weight: 700;
-    color: $color-deep-blue;
+  }
+  h4{
+    font-size: 3.45rem;
+    letter-spacing: -.8px;
+  }
+  h5{
+    font-size: 3rem;
+    letter-spacing: -.5px;
   }
   p{
     line-height: 1.7;
     margin: 1.5rem 0;
-    font-family: Light;
-    font-weight: 600;
+    font-family: Regular;
+    font-weight: 200;
     font-size: 1.8rem;
     letter-spacing: -.2px;
     color: $color-deep-blue;
@@ -84,7 +98,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    align-items: center;
+    &.aligncenter{
+      align-items: center;
+    }
   }
   .center{
     text-align: center;
@@ -93,6 +109,31 @@
     text-decoration: none;
     font-size: inherit;
     color: inherit;
+  }
+  .arrowed-link{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.4rem;
+    span{
+        margin-left: 3px;
+        transition: all 300ms ease-in-out;
+        opacity: 1;
+        svg{
+            margin-bottom: -0.2rem;
+            height: 1.2rem;
+            object-fit: contain;
+        }
+    }
+    &:hover{
+        span{
+            margin-left: .7rem;
+        }
+    }
   }
 
   @media screen and (max-width: 940px){
@@ -104,6 +145,9 @@
     h2 {
       font-size: 3.3rem;
   }
+    h5{
+      font-size: 2.6rem;
+    }
     p{
         font-size: 1.5rem;
     }
@@ -113,6 +157,7 @@
     }
   /*props styles*/
   @import "./props/mini-header.scss";
+  @import "./props/personality-info.scss";
   
   /*Components styles*/
   @import "./styles/components/navbar.scss";
@@ -122,6 +167,7 @@
   @import "./styles/components/appinfo.scss";
   @import "./styles/components/security.scss";
   @import "./styles/components/reviews.scss";
+  @import "./styles/components/reason.scss";
   @import "./styles/components/signup.scss";
   @import "./styles/components/footer.scss";
   @import "./styles/components/toolkit.scss"

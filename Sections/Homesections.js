@@ -3,6 +3,7 @@ import Richstep from "../Components/Richstep.js";
 import Invest from "../Components/Invest.js";
 import AppInfo from "../Components/AppInfo.js";
 import Security from "../Components/Security.js";
+import Reason from "../Components/Reason.js";
 
 const Homesections = () => {
   return (
@@ -12,6 +13,7 @@ const Homesections = () => {
       <Invest />
       <AppInfo />
       <Security />
+      <Reason />
     </>
   );
 };
