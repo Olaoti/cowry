@@ -25,11 +25,16 @@
     font-family: Medium;
   
   }
-  h2, h4, h5{
+  h1, h2, h4, h5{
     line-height: 1.25;
     margin-bottom: 0.7em;
     font-weight: 900;
     color: $color-deep-blue;
+  }
+  h1{
+    font-size: 5.46rem;
+    letter-spacing: -2px;
+    font-family: Bold;
   }
   h2{
     font-size: 4.86rem;
@@ -109,6 +114,10 @@
     text-decoration: none;
     font-size: inherit;
     color: inherit;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
   }
   .arrowed-link{
     font-size: 1.2rem;
@@ -142,6 +151,9 @@
     }
   }
   @media screen and (max-width:750px) {
+    h1{
+      font-size: 3.9rem;
+    }
     h2 {
       font-size: 3.3rem;
   }
@@ -155,6 +167,9 @@
   @media screen and (max-width:600px) {
 
     }
+  /* 404 style*/
+  @import "./styles/404.scss";
+
   /*props styles*/
   @import "./props/mini-header.scss";
   @import "./props/personality-info.scss";

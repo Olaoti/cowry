@@ -1,0 +1,25 @@
+import Navbar from "../Components/Navbar.js";
+import Footer from "../Sections/Footer.js";
+import Link from "next/link";
+const ErrorPage = () => {
+  return (
+    <div className="error-page">
+      <Navbar />
+      <div className="error-page__container">
+        <div className="center">
+          <h1>You didn't come this far, to only come this far</h1>
+          <p>Don't stop, keep going!</p>
+          <Link href="/" legacyBehavior>
+            <a>
+              <button className="btn">Return to the Homepage</button>
+            </a>
+          </Link>
+        </div>
+      </div>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default ErrorPage;
