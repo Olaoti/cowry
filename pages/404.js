@@ -7,8 +7,8 @@ const ErrorPage = () => {
       <Navbar />
       <div className="error-page__container">
         <div className="center">
-          <h1>You didn't come this far, to only come this far</h1>
-          <p>Don't stop, keep going!</p>
+          <h1>You didn&apos;t come this far, to only come this far</h1>
+          <p>Don&apos;t stop, keep going!</p>
           <Link href="/" legacyBehavior>
             <a>
               <button className="btn">Return to the Homepage</button>
