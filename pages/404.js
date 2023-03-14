@@ -1,5 +1,4 @@
 import Navbar from "../Components/Navbar.js";
-import Footer from "../Sections/Footer.js";
 import Link from "next/link";
 const ErrorPage = () => {
   return (
@@ -16,8 +15,6 @@ const ErrorPage = () => {
           </Link>
         </div>
       </div>
-
-      <Footer />
     </div>
   );
 };

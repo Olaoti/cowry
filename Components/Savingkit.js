@@ -8,6 +8,9 @@ const Savingkit = () => {
           about that?
         </p>
       </div>
+      <div className="grid-two savings-cards">
+        <div className="card"></div>
+      </div>
     </div>
   );
 };

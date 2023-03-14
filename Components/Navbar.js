@@ -15,7 +15,7 @@ import gsap from "gsap";
 function Navbar() {
   const [show, handleShow] = useState(false);
   const handleScroll = () => {
-    if (window.scrollY > 140) {
+    if (window.scrollY >= 140) {
       handleShow(true);
     } else {
       handleShow(false);

@@ -25,7 +25,7 @@
     font-family: Medium;
   
   }
-  h1, h2, h4, h5{
+  h1, h2, h3, h4, h5{
     line-height: 1.25;
     margin-bottom: 0.7em;
     font-weight: 900;
@@ -39,6 +39,11 @@
   h2{
     font-size: 4.86rem;
     letter-spacing: -1px;
+  }
+  h3{
+    font-size: 3.9rem;
+    letter-spacing: -1px;
+    font-family: Bold;
   }
   h4{
     font-size: 3.45rem;
@@ -156,7 +161,10 @@
     }
     h2 {
       font-size: 3.3rem;
-  }
+    }
+    h3{
+      font-size: 3rem;
+    }
     h5{
       font-size: 2.6rem;
     }
@@ -185,7 +193,10 @@
   @import "./styles/components/reason.scss";
   @import "./styles/components/signup.scss";
   @import "./styles/components/footer.scss";
-  @import "./styles/components/toolkit.scss"
+  @import "./styles/components/toolkit.scss";
+  @import "./styles/components/savingkit.scss";
+  @import "./styles/components/save-goals.scss";
+
   
   /*Pages styles*/
-  
+  @import "./styles/pages/save.scss";
