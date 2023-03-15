@@ -1,5 +1,6 @@
 import Toolkit from "../Components/Toolkit.js";
 import PersonalityInfo from "../props/personalityInfo.js";
+import PlanningTools from "../Components/PlanningTools.js";
 const Plansections = () => {
   return (
     <div className="plansections">
@@ -10,6 +11,7 @@ const Plansections = () => {
         personaName="- Oreoluwa Macaulay,"
         personaJob="Dominating her finances."
       />
+      <PlanningTools />
     </div>
   );
 };

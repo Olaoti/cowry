@@ -180,6 +180,7 @@
 
   /*props styles*/
   @import "./props/mini-header.scss";
+  @import "./props/faq.scss";
   @import "./props/personality-info.scss";
   
   /*Components styles*/
@@ -200,3 +201,4 @@
   
   /*Pages styles*/
   @import "./styles/pages/save.scss";
+  @import "./styles/pages/plan.scss"

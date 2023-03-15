@@ -1,4 +1,3 @@
-import "../styles/globals.css";
 import "../styles/index.scss";
 import Layout from "../props/Layout.js";
 
