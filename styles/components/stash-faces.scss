@@ -1,0 +1,40 @@
+.stash-faces{
+    overflow-x:hidden ;
+    .to-left{
+        display: flex;
+        width: 100%;
+        overflow-x: visible;
+        margin: 3.6rem 0 ;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .persona{
+            margin-right: 8rem;
+            display: flex;
+            justify-content: center;
+            .image{
+                position: relative;
+                img{
+                    position: absolute;
+                    height: 6.4rem;
+                    width: 6.4rem;
+                    top: 0;
+                    left: 0;
+                    border-radius: 100%;
+                    overflow: hidden;
+                    box-shadow: 1px 3px 4px rgba(8,37,82,.1);
+                    transition: transform 1s cubic-bezier(.19,1,.22,1);
+                }
+            }
+            span{
+                    display: inline-block;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin-left: 2rem;
+                color: #082552;
+            }
+        }
+    }
+}
