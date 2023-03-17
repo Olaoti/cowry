@@ -1,13 +1,14 @@
 .stash-invest{
     padding: 9rem;
     background-color: $light-bg;
+    overflow-x: hidden;
     &__info{
         width: 100%;
         min-height: 35rem;
         .options{
             display: flex;
             border-radius: 2.4rem;
-            background-color: rgba(0,102,245,.06);
+            background-color: $color-grey;
             margin: 2rem 0;
             align-items: center;
             width: max-content;
@@ -68,6 +69,14 @@
             p{
                 margin-right: 0;
                 font-size: 1.65rem;
+            }
+            .options{
+                div{
+                    padding: 1.4rem 2.4rem;
+                }
+                &:not(:first-child){
+                    margin-left: 1.2rem;
+                }
             }
         }
         &__image{

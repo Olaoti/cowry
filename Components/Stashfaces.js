@@ -83,7 +83,7 @@ const Stashfaces = () => {
   ];
   return (
     <div className="stash-faces">
-      <div className="to-left">
+      <div className="to-left animation">
         {Faces.filter((face) => face.id < 11).map((item) => {
           return (
             <div className="persona" key={item.id}>
@@ -98,6 +98,59 @@ const Stashfaces = () => {
             </div>
           );
         })}
+        {Faces.filter((face) => face.id < 11).map((item) => {
+          return (
+            <div className="persona" key={item.id}>
+              <div className="image">
+                <div className="bg"></div>
+                <img
+                  src={`assets/stash/stash-faces/face-${item?.id}.jpg`}
+                  alt=""
+                />
+              </div>
+              <span>@{item?.face}</span>
+            </div>
+          );
+        })}
+      </div>
+      <div className="to-right animation">
+        {Faces.filter((face) => face.id >= 11).map((item) => {
+          return (
+            <div className="persona" key={item.id}>
+              <div className="image">
+                <div className="bg"></div>
+                <img
+                  src={`assets/stash/stash-faces/face-${item?.id}.jpg`}
+                  alt=""
+                />
+              </div>
+              <span>@{item?.face}</span>
+            </div>
+          );
+        })}
+        {Faces.filter((face) => face.id >= 11).map((item) => {
+          return (
+            <div className="persona" key={item.id}>
+              <div className="image">
+                <div className="bg"></div>
+                <img
+                  src={`assets/stash/stash-faces/face-${item?.id}.jpg`}
+                  alt=""
+                />
+              </div>
+              <span>@{item?.face}</span>
+            </div>
+          );
+        })}
+      </div>
+      <div className="center">
+        <h3>
+          <span>Don't be the</span> weird @user19562230
+        </h3>
+        <p>
+          No need to remember long numbers. Claim your username now and make
+          instant transactions from your Stash on the go.
+        </p>
       </div>
     </div>
   );

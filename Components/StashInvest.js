@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
 
 const StashInvest = () => {
   const [current, setCurrent] = useState(0);
+  const stashRef = useRef();
   const stashes = [
     {
       id: 0,
@@ -22,6 +24,16 @@ const StashInvest = () => {
       info: "Fund your investment plans directly from your Stash. With diverse investment opportunities, there’s no limit to your moves as an investor.",
     },
   ];
+  useEffect(() => {
+    gsap.fromTo(
+      stashRef.current,
+      {
+        x: -40,
+        opacity: 0,
+      },
+      { x: 0, opacity: 1, duration: 0.5 }
+    );
+  }, [current, stashRef]);
   return (
     <div className="stash-invest grid-two aligncenter">
       <div className="stash-invest__info">
@@ -40,8 +52,10 @@ const StashInvest = () => {
             );
           })}
         </div>
-        <h3>{stashes[current].head}</h3>
-        <p>{stashes[current].info}</p>
+        <div className="stash-words" ref={stashRef}>
+          <h3>{stashes[current].head}</h3>
+          <p>{stashes[current].info}</p>
+        </div>
       </div>
       <div className="stash-invest__image">
         <img src="/assets/stash/stash-transfer.png" alt="" />
