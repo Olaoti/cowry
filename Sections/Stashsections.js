@@ -30,7 +30,7 @@ const Stashsections = () => {
         />
         <Faq
           question="Is there a transaction limit?"
-          answer="Transactions are capped based on the limit set on the bank account you’re receiving from or sending to."
+          answer="Transactions are capped based on the limit set on the bank account you are receiving from or sending to."
         />
         <Faq
           question="Can any one send money to the account number?"
@@ -42,7 +42,7 @@ const Stashsections = () => {
         />
         <Faq
           question="Why can't I send to other bank accounts?"
-          answer="We’re very big on security and have limited sending money to only your linked BVN accounts to curb imposters."
+          answer="We are very big on security and have limited sending money to only your linked BVN accounts to curb imposters."
         />
       </div>
     </div>
