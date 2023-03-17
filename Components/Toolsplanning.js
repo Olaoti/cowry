@@ -1,8 +1,7 @@
 import Faq from "../props/Faq.js";
-PlanningTools = () => {
-  return (
-    <div className="planning-tools grid-two">
-      <div className="planning-tools__info">
+const Toolsplanning = () => {
+    return ( <div className="planning-tools grid-two">
+         <div className="planning-tools__info">
         <h2>Financial planning happens with every interaction</h2>
       </div>
       <div className="faq-section">
@@ -19,8 +18,7 @@ PlanningTools = () => {
           answer="You know the tedious process that comes with planning for the future? We just tossed it out the window on your behalf. To replace that process, we present you with our set of easy to use financial tools that enables you plan for life moments like education, retirement or buying your first home."
         />
       </div>
-    </div>
-  );
-};
-
-export default PlanningTools;
+    </div> );
+}
+ 
+export default Toolsplanning;
