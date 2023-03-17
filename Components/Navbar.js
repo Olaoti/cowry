@@ -48,14 +48,20 @@ function Navbar() {
       img: Invest,
       head: "Invest",
       text: "Build a global portfolio in one app",
+<<<<<<< HEAD
       link: "mutual-funds",
+=======
+>>>>>>> 9b8b9504063135d3430f34c0cd06ae86b499cd96
     },
     {
       id: 3,
       img: Stash,
       head: "Get stash",
       text: "A digital wallet for everything",
+<<<<<<< HEAD
       link: "stash",
+=======
+>>>>>>> 9b8b9504063135d3430f34c0cd06ae86b499cd96
     },
     {
       id: 4,

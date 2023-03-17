@@ -19,6 +19,7 @@ const PlanningTools = () => {
           answer="You know the tedious process that comes with planning for the future? We just tossed it out the window on your behalf. To replace that process, we present you with our set of easy to use financial tools that enables you plan for life moments like education, retirement or buying your first home."
         />
       </div>
+<<<<<<< HEAD
       <div class="chart__container">
         <div id="priceChart" style={{ minHeight: "170px" }}>
           <div
@@ -398,6 +399,9 @@ const PlanningTools = () => {
           <span class="">ALL</span>
         </div>
       </div>
+=======
+      
+>>>>>>> 9b8b9504063135d3430f34c0cd06ae86b499cd96
     </div>
   );
 };

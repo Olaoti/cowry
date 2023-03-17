@@ -3,7 +3,11 @@
     height: auto;
     background: white;
     border-bottom: 0.5px solid rgba(8,37,82,.05);
+<<<<<<< HEAD
     padding:2.4rem 2rem;
+=======
+    padding: 1.6rem;
+>>>>>>> 9b8b9504063135d3430f34c0cd06ae86b499cd96
     cursor: pointer;
     &__heading{
         cursor: pointer;
@@ -12,12 +16,18 @@
         align-items: center;
         h4{
             font-size: 2.5rem;
+<<<<<<< HEAD
             letter-spacing: 0;
+=======
+>>>>>>> 9b8b9504063135d3430f34c0cd06ae86b499cd96
             margin-right:4rem;
             margin-bottom: 0;
             padding: 1rem 0;
             color: $color-primary-blue;
+<<<<<<< HEAD
             font-family: Bold;
+=======
+>>>>>>> 9b8b9504063135d3430f34c0cd06ae86b499cd96
         }
         .sign{
             width: 2.2rem;
