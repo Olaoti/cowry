@@ -3,7 +3,10 @@ import MiniHeader from "../props/miniHeader.js";
 import Stashsections from "../Sections/Stashsections.js";
 const Stash = () => {
   return (
-    <div className="stash" style={{ backgroundColor: "#cdf2fc" }}>
+    <div
+      className="stash"
+      style={{ backgroundColor: "rgba(205, 242, 252, 0.7)" }}
+    >
       <Navbar />
       <MiniHeader
         smallText="STASH"
