@@ -1,5 +1,5 @@
 import Faq from "../props/Faq.js";
-const PlanningTools = () => {
+PlanningTools = () => {
   return (
     <div className="planning-tools grid-two">
       <div className="planning-tools__info">
@@ -12,7 +12,7 @@ const PlanningTools = () => {
         />
         <Faq
           question="Planning tools packed in clicks"
-          answer={`Planning is no longer just a word, it's something you can see, feel and play with. The Cowrywise platform packs the intelligence of experienced financial analysts into a few clicks making it possible to visualize the outcomes of your financial decisions today. As you create your investment plans, we onboard you into well thought out steps that enable you plan simple.`}
+          answer={`Planning is no longer just a word, its something you can see, feel and play with. The Cowrywise platform packs the intelligence of experienced financial analysts into a few clicks making it possible to visualize the outcomes of your financial decisions today. As you create your investment plans, we onboard you into well thought out steps that enable you plan simple.`}
         />
         <Faq
           question="Planning for life moments has never been easier"
