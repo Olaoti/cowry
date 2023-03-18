@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar.js";
 import MiniHeader from "../props/miniHeader.js";
 import Stashsections from "../Sections/Stashsections.js";
+import Footer from "../Sections/Footer.js";
 const Stash = () => {
   return (
     <div
@@ -16,6 +17,7 @@ const Stash = () => {
         headimg={<img src="/assets/stash/stash-landing.png" alt="" />}
       />
       <Stashsections />
+      <Footer />
     </div>
   );
 };

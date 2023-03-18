@@ -2,6 +2,8 @@ import MiniHeader from "../props/miniHeader";
 import Navbar from "../Components/Navbar.js";
 import NairaPlan from "../public/assets/plan/naira-plan.svg";
 import Plansections from "../Sections/Plansections.js";
+import Footer from "../Sections/Footer.js";
+
 const plan = () => {
   return (
     <div className="plan" style={{ backgroundColor: "#cdf2fc" }}>
@@ -13,6 +15,7 @@ const plan = () => {
         headimg={<NairaPlan />}
       />
       <Plansections />
+      <Footer />
     </div>
   );
 };

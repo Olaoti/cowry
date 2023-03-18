@@ -62,12 +62,14 @@ function Navbar() {
       img: Sprout,
       head: "Sprout",
       text: "Put your business idle cash to work",
+      link: "sprout",
     },
     {
       id: 5,
       img: Embed,
       head: "Embed",
       text: "Offer investment services in your app",
+      link: "embed",
     },
     {
       id: 6,
@@ -231,7 +233,7 @@ function Navbar() {
     );
   }, [business, businessRef]);
 
-  /* for business animation*/
+  /* for dev animation*/
   useEffect(() => {
     const devElement = devRef.current;
     gsap.fromTo(
@@ -336,7 +338,7 @@ function Navbar() {
     gsap.fromTo(
       menuEm.querySelector(".nav-anim9"),
       { opacity: 0, y: 15 },
-      { opacity: 1, y: 0, delay: 1.5, duration: 0.2 }
+      { opacity: 1, y: 0, delay: 1.6, duration: 0.2 }
     );
   }, [showMenu, menuRef]);
 
@@ -445,18 +447,27 @@ function Navbar() {
                 ?.filter((list) => list.id === 4)
                 .map((link) => {
                   return (
-                    <div
-                      className={`link-to-page animated${link?.id}`}
+                    <Link
+                      href={`${link?.link}`}
+                      legacyBehavior
+                      className="link"
                       key={link.id}
                     >
-                      <div className="image">
-                        <link.img />
-                      </div>
-                      <div className="link__texts">
-                        <div className="link__texts__head">{link.head}</div>
-                        <div className="link__texts__body">{link.text}</div>
-                      </div>
-                    </div>
+                      <a>
+                        <div
+                          className={`link-to-page animated${link?.id}`}
+                          key={link.id}
+                        >
+                          <div className="image">
+                            <link.img />
+                          </div>
+                          <div className="link__texts">
+                            <div className="link__texts__head">{link.head}</div>
+                            <div className="link__texts__body">{link.text}</div>
+                          </div>
+                        </div>
+                      </a>
+                    </Link>
                   );
                 })}
             </div>
@@ -485,18 +496,31 @@ function Navbar() {
                   ?.filter((list) => list.id > 4)
                   .map((link) => {
                     return (
-                      <div
-                        className={`link-to-page animated${link?.id}`}
+                      <Link
+                        href={`${link?.link}`}
+                        legacyBehavior
+                        className="link"
                         key={link.id}
                       >
-                        <div className="image">
-                          <link.img />
-                        </div>
-                        <div className="link__texts">
-                          <div className="link__texts__head">{link.head}</div>
-                          <div className="link__texts__body">{link.text}</div>
-                        </div>
-                      </div>
+                        <a>
+                          <div
+                            className={`link-to-page animated${link?.id}`}
+                            key={link.id}
+                          >
+                            <div className="image">
+                              <link.img />
+                            </div>
+                            <div className="link__texts">
+                              <div className="link__texts__head">
+                                {link.head}
+                              </div>
+                              <div className="link__texts__body">
+                                {link.text}
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </Link>
                     );
                   })}
               </div>

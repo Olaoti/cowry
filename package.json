@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "babel-plugin-inline-react-svg": "^2.0.2",
+    "chart.js": "^2.9.4",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",
     "gsap": "^3.11.4",
