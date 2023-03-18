@@ -2,7 +2,7 @@
     .mini-header{
         min-height: 110vh;
         &__texts{
-            padding: 0 2.4rem;
+            padding: 0 2.4rem 4rem 9rem;
         }
         &__image{
             height: 100%;
@@ -76,6 +76,9 @@
 @media screen and (max-width:1050px){
     .stash{
         .mini-header{
+            &__texts{
+                padding: 0 2.4rem;
+            }
             &__image{
                 height: 60rem;
                 img{
@@ -118,6 +121,7 @@
 @media screen and (max-width:600px){
     .stash{
         .mini-header{
+            min-height: auto;
             &__image{
                 margin-top: -4rem;
                 height: auto;

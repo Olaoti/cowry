@@ -1,17 +1,22 @@
 .mutual-funds{
     .mini-header{
         &__texts{
-            padding: 0 4rem 4rem 2.4rem;
-            p{
-                font-size: 1.8rem;
-                letter-spacing: 0;
-            }
+            padding: 0 0 4rem 9rem;
         }
         &__image{
             .headerimg{
                 svg{
                     margin-right: -10%;
                 }
+            }
+        }
+    }
+}
+@media screen and (max-width:1250px) {
+    .mutual-funds{
+        .mini-header{
+            &__texts{
+                padding: 0 2.4rem;
             }
         }
     }
