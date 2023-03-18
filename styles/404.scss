@@ -1,7 +1,7 @@
 .error-page{
-        background-image: url(/assets/errorpage-bg.svg);
+        /*background-image: url(/assets/errorpage-bg.svg);
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: cover;*/
     &__container{
         min-height: 80vh;
         display: grid;
@@ -19,8 +19,8 @@
 }
 @media screen and (max-width:900px) {
     .error-page{
-        background-position:right;
-        background-position-y:top ;
+        /*background-position:right;
+        background-position-y:top ;*/
         &__container{
             
             .center{
