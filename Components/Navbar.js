@@ -447,27 +447,18 @@ function Navbar() {
                 ?.filter((list) => list.id === 4)
                 .map((link) => {
                   return (
-                    <Link
-                      href={`${link?.link}`}
-                      legacyBehavior
-                      className="link"
+                    <div
+                      className={`link-to-page animated${link?.id}`}
                       key={link.id}
                     >
-                      <a>
-                        <div
-                          className={`link-to-page animated${link?.id}`}
-                          key={link.id}
-                        >
-                          <div className="image">
-                            <link.img />
-                          </div>
-                          <div className="link__texts">
-                            <div className="link__texts__head">{link.head}</div>
-                            <div className="link__texts__body">{link.text}</div>
-                          </div>
-                        </div>
-                      </a>
-                    </Link>
+                      <div className="image">
+                        <link.img />
+                      </div>
+                      <div className="link__texts">
+                        <div className="link__texts__head">{link.head}</div>
+                        <div className="link__texts__body">{link.text}</div>
+                      </div>
+                    </div>
                   );
                 })}
             </div>
