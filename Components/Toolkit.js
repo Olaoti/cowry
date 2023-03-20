@@ -1,9 +1,46 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect, useRef } from "react";
+gsap.registerPlugin(ScrollTrigger);
+
 import ArrowedLink from "../props/arrowedLink.js";
 
 const Toolkit = () => {
+  const centerRef = useRef();
+  const toolRef = useRef();
+  useEffect(() => {
+    gsap.fromTo(
+      centerRef.current,
+      { opacity: 0, y: 200 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        delay: 0.1,
+        scrollTrigger: {
+          trigger: centerRef.current,
+          start: "top bottom",
+        },
+      }
+    );
+    gsap.fromTo(
+      toolRef.current,
+      { opacity: 0, y: 200 },
+      {
+        opacity: 1,
+        y: 0,
+        delay: 0.15,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: toolRef.current,
+          start: "top bottom",
+        },
+      }
+    );
+  }, [centerRef, toolRef]);
   return (
     <div className="toolkit">
-      <div className="center">
+      <div className="center" ref={centerRef}>
         <h2>Your personal money toolkit</h2>
         <p>
           You know the tedious process that comes with planning for the future?
@@ -12,7 +49,7 @@ const Toolkit = () => {
         </p>
       </div>
       <div className="grid-two toolkit__info">
-        <div className="tools">
+        <div className="tools" ref={toolRef}>
           <div className="tools__card">
             <h5>Can I send my child to her dream university?</h5>
             <p>
